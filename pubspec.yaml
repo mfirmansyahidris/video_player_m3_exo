@@ -1,0 +1,31 @@
+name: video_player_m3_exo
+description: Android implementation of the cached_video_player_m3_exo plugin.
+repository: https://github.com/mfirmansyahidris/video_player_m3_exo
+version: 1.0.0
+
+environment:
+  sdk: ^3.1.0
+  flutter: ">=3.13.0"
+
+flutter:
+  plugin:
+    implements: cached_video_player_m3_exo
+    platforms:
+      android:
+        dartPluginClass: AndroidVideoPlayer
+        package: io.flutter.plugins.videoplayer
+        pluginClass: VideoPlayerPlugin
+
+dependencies:
+  flutter:
+    sdk: flutter
+  video_player_platform_interface: ">=6.1.0 <7.0.0"
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  pigeon: ^9.2.5
+
+topics:
+  - video
+  - video-player
